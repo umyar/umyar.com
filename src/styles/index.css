@@ -207,6 +207,10 @@ dd {
   margin-bottom: 3rem;
 }
 
+.сross {
+  text-decoration: line-through;
+}
+
 p {
   margin: 2em 0;
   max-width: 50em;
