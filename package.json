@@ -1,0 +1,11 @@
+{
+  "name": "foo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:umyar/foo.git",
+  "author": "Umyar Yusupov <umiarka@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}
