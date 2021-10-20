@@ -191,6 +191,15 @@ main h2 {
   margin: 0.5em 0;
 }
 
+.faq h2 {
+  display: inline-block;
+}
+
+.faq span {
+  display: inline-block;
+  margin-left: 0.25em;
+}
+
 dl {
   margin: 2em 0;
   max-width: 50em;
@@ -347,10 +356,6 @@ footer {
 }
 
 @media screen and (max-width: 860px) {
-  main h2 {
-    font-size: 7rem;
-  }
-
   .advantages li {
     margin: 2rem;
   }
@@ -400,19 +405,12 @@ footer {
     text-align: end;
   }
 
-  /*.active {*/
-  /*  border-right: 1px solid #feca39;*/
-  /*  border-bottom: none;*/
-  /*}*/
   /* NAVIGATION MANIPULATIONS FINISH*/
 }
 
 @media screen and (max-width: 660px) {
   .main-layout {
     margin: 0 3rem;
-  }
-  main h2 {
-    font-size: 6rem;
   }
   .additional > span {
     margin-left: 0;
@@ -449,9 +447,6 @@ footer {
   }
   .main-article {
     margin: 3em 0 5em 0;
-  }
-  main h2 {
-    font-size: 4.8rem;
   }
   .additional {
     padding: 0 1rem;
