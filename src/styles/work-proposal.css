@@ -66,7 +66,7 @@ body {
 
 .main-layout {
   width: 100%;
-  max-width: 4096px;
+  max-width: 1920px;
   margin: 0 10rem;
   display: flex;
   flex-direction: column;
@@ -351,6 +351,10 @@ footer {
   justify-content: center;
 }
 
+.contacts {
+  max-width: 60rem;
+}
+
 .contacts a {
   display: block;
   text-decoration: none;
@@ -417,7 +421,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 950px) {
   .advantages li {
     margin: 2rem;
   }
@@ -494,9 +498,7 @@ footer {
     margin: 0 3rem;
   }
   .logo {
-    grid-column-gap: 0.8rem;
-    /*grid-template-columns: 4.5rem auto;*/
-    grid-template-rows: 3.5rem 4rem;
+    grid-template-rows: 3.5rem 2rem;
   }
   .logo-ie img {
     max-width: 17.6rem;
