@@ -27,9 +27,8 @@
   </head>
   <body>
     <div class="main-layout">
-      <header class="weird">
+      <header>
         <a href="/" class="logo">
-          <!--          <div class="logo-lamp"><img src="./img/lampbold.png" alt="logo" /></div>-->
           <h1>Umyar Yusupov</h1>
           <strong class="digital">Frontend Engineer</strong>
         </a>
@@ -60,7 +59,7 @@
           </nav>
         </div>
       </header>
-      <main class="weird">
+      <main>
         <section>
           <h2>Привет!</h2>
           <p>
@@ -73,10 +72,6 @@
           <p>Не особо то и много пока на самом деле.</p>
           <div>
             <ul class="site-ux-options">
-              <li>
-                Можно
-                <button id="weird-btn" class="weird action-btn">сделать поровнее 🌚</button>
-              </li>
               <li>Можно <a href="./work-proposal.html">предложить работу</a></li>
               <li>
                 Можно <a href="./contacts.html" class="disabled">посмотреть контакты</a> (пока
@@ -90,7 +85,7 @@
           </div>
         </section>
       </main>
-      <footer class="weird">
+      <footer>
         <div class="contacts">
           <a href="tel:+79272865060">+7(927)286-50-60</a>
           <ul class="contacts-ul">
@@ -118,44 +113,5 @@
         </div>
       </footer>
     </div>
-    <script>
-      const menu = document.querySelector('.main-nav');
-      const menuButton = document.querySelector('.menu-toggle-button');
-      const main = document.querySelector('main');
-      const header = document.querySelector('header');
-      const footer = document.querySelector('footer');
-      const logo = document.querySelector('.logo');
-      const weirdBtn = document.querySelector('#weird-btn');
-
-      weirdBtn.addEventListener('click', toggleSite);
-
-      function toggleSite() {
-        header.classList.toggle('weird');
-        main.classList.toggle('weird');
-        footer.classList.toggle('weird');
-        weirdBtn.classList.toggle('weird');
-
-        if (weirdBtn.classList.contains('weird')) {
-          weirdBtn.innerHTML = 'сделать поровнее 🌚';
-        } else {
-          weirdBtn.innerHTML = 'сделать обратно криво 🤯';
-        }
-        // logo.classList.toggle('blured');
-
-        // menu.classList.toggle('opened-menu');
-        // menuButton.classList.toggle('change');
-      }
-
-      menuButton.addEventListener('click', toggle);
-
-      function toggle() {
-        main.classList.toggle('blured');
-        footer.classList.toggle('blured');
-        logo.classList.toggle('blured');
-
-        menu.classList.toggle('opened-menu');
-        menuButton.classList.toggle('change');
-      }
-    </script>
   </body>
 </html>

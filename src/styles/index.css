@@ -107,14 +107,6 @@ header {
     );
   }
 
-  header.weird .logo {
-    background-image: linear-gradient(
-      to right,
-      rgba(110, 123, 251, 0.15),
-      rgba(156, 252, 248, 0.3)
-    );
-  }
-
   .logo-lamp {
     display: block;
   }
@@ -194,7 +186,7 @@ header {
 
 main {
   font-size: 1.5rem;
-  margin: 4rem 0 8rem;
+  margin: 8rem 0 8rem;
   min-height: calc(100vh - 50rem); /* 50rem - эмпирика прижатия футера к низу */
   transition: all 0.6s;
 }
@@ -202,28 +194,14 @@ main {
 header {
   transition: transform 1s ease-in-out;
 }
-header.weird {
-  transform: rotate(1deg) translate(0rem, 4rem);
-}
 
 main {
   transition: transform 1s ease-in-out;
-}
-main.weird {
-  transform: rotate(-1deg) translate(2rem, 4rem);
-}
-
-main.weird .site-ux-options {
-  font-size: 1.7rem;
 }
 
 footer {
   transition: transform 1.2s linear;
 }
-footer.weird {
-  transform: rotate(1deg) translate(47vw, 2rem);
-}
-/* animation timings END */
 
 main h2 {
   font-size: 2.5rem;
@@ -346,7 +324,6 @@ p {
 footer {
   display: flex;
   width: 100%;
-  max-width: calc(60rem + 4rem);
   margin: auto 0 4rem 0;
   text-align: center;
   justify-content: center;
@@ -473,13 +450,13 @@ footer {
   }
 
   /* NAVIGATION MANIPULATIONS FINISH*/
-
-  footer.weird {
-    transform: rotate(1deg) translate(35rem, 2rem);
-  }
 }
 
 @media screen and (max-width: 660px) {
+  main {
+    margin: 4rem 0 8rem;
+  }
+
   .main-layout {
     margin: 0 3rem;
   }
