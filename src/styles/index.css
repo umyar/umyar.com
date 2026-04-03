@@ -75,7 +75,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin: 4rem 0 2rem 0;
 }
 
 .logo {
@@ -100,11 +100,10 @@ header {
     user-select: none;
     text-decoration: none;
     color: #000;
-    background-image: linear-gradient(
-      to right,
-      rgba(110, 123, 251, 0.3),
-      rgba(156, 252, 248, 0.15)
-    );
+    background-image: linear-gradient(to left, #dc2424, #4a569d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .logo-lamp {
@@ -205,9 +204,12 @@ footer {
 
 main h2 {
   font-size: 2.5rem;
-  letter-spacing: -2px;
   line-height: 1em;
-  margin: 0.5em 0;
+  background-image: linear-gradient(to left, #dc2424, #4a569d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .action-btn {
