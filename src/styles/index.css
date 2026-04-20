@@ -190,13 +190,26 @@ main {
 
 .main-content {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 4rem;
 }
 
 .main-text {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-text-sections {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-text .inline-footer {
+  margin-top: auto;
 }
 
 section {
@@ -399,6 +412,10 @@ footer {
   animation: gain ease-in-out 0.8s infinite;
 }
 
+.tg-pulse {
+  animation: gain ease-in-out 0.8s infinite;
+}
+
 @keyframes gain {
   from {
     transform: scale(1);
@@ -413,7 +430,24 @@ footer {
   }
 }
 
+.inline-footer {
+  display: block;
+  margin-top: 2rem;
+}
+
+footer {
+  display: none;
+}
+
 @media screen and (max-width: 1280px) {
+  .inline-footer {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+  }
+
   .main-photo {
     max-width: 45%;
   }
