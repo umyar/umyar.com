@@ -249,27 +249,6 @@ main h2 {
   display: inline-block;
 }
 
-.action-btn {
-  padding: 0 5px;
-}
-
-@counter-style repeating-emoji {
-  system: cyclic;
-  symbols: '\1F92B''\1F928''\1F914''\1F644';
-  suffix: ' ';
-  fallback: square;
-}
-
-.site-ux-options {
-  padding-left: 2rem;
-  transition: all 0.1s;
-}
-
-.site-ux-options li {
-  margin: 1rem;
-  list-style-type: repeating-emoji;
-}
-
 .faq h2 {
   display: inline-block;
 }
@@ -293,10 +272,6 @@ dt {
 
 dd {
   margin-bottom: 3rem;
-}
-
-.сross {
-  text-decoration: line-through;
 }
 
 p {
