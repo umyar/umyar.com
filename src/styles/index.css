@@ -184,10 +184,34 @@ header {
 /* BURGER NAV BUTTON END*/
 
 main {
-  font-size: 1.5rem;
-  margin: 8rem 0 8rem;
-  min-height: calc(100vh - 50rem); /* 50rem - эмпирика прижатия футера к низу */
+  font-size: 1.8rem;
   transition: all 0.6s;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.main-text {
+  flex: 1;
+  min-width: 0;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+.main-photo {
+  flex-shrink: 0;
+  max-width: 56rem;
+}
+
+.main-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 /* animation timings START */
 header {
@@ -263,7 +287,7 @@ dd {
 }
 
 p {
-  margin: 2em 0;
+  margin: 1em 0;
   max-width: 50em;
 }
 
@@ -326,7 +350,7 @@ p {
 footer {
   display: flex;
   width: 100%;
-  margin: auto 0 4rem 0;
+  margin: 5rem 0;
   text-align: center;
   justify-content: center;
 }
@@ -389,6 +413,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .main-photo {
+    max-width: 45%;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .main-layout {
     margin: 0 5rem;
@@ -402,6 +432,10 @@ footer {
 }
 
 @media screen and (max-width: 950px) {
+  main {
+    font-size: 1.5rem;
+  }
+
   .advantages li {
     margin: 2rem;
   }
@@ -456,7 +490,16 @@ footer {
 
 @media screen and (max-width: 660px) {
   main {
-    margin: 4rem 0 8rem;
+    margin: 4rem 0;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .main-photo {
+    max-width: 40rem;
+    align-self: center;
   }
 
   .main-layout {
