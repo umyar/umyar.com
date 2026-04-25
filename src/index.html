@@ -76,7 +76,13 @@
             </div>
           </div>
           <div class="main-photo">
-            <img src="./img/umyar-grey.webp" alt="Umyar Yusupov" />
+            <img
+              id="me"
+              src="./img/umyar-grey.webp"
+              alt="Umyar Yusupov"
+              style="cursor: pointer"
+              onclick="(function(){var s=[new Audio('./audio/hello.ogg'),new Audio('./audio/how-are-u.ogg')];s[Math.floor(Math.random()*s.length)].play();})()"
+            />
           </div>
         </div>
       </main>
@@ -97,5 +103,13 @@
         </div>
       </footer>
     </div>
+    <script>
+      const img = document.getElementById('me');
+
+      img.addEventListener('click', () => {
+        img.style.transform = 'scale(0.95)';
+        setTimeout(() => (img.style.transform = 'scale(1)'), 100);
+      });
+    </script>
   </body>
 </html>
