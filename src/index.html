@@ -75,14 +75,34 @@
               </div>
             </div>
           </div>
-          <div class="main-photo">
+          <div class="main-photo" style="position: relative">
             <img
               id="me"
               src="./img/umyar-grey.webp"
               alt="Umyar Yusupov"
-              style="cursor: pointer"
-              onclick="(function(){var s=[new Audio('./audio/hello.ogg'),new Audio('./audio/how-are-u.ogg')];s[Math.floor(Math.random()*s.length)].play();})()"
+              style="cursor: pointer; transition: opacity 1.5s ease, transform 0.1s"
             />
+            <span
+              id="banner"
+              style="
+                position: absolute;
+                bottom: 1rem;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #fff;
+                color: #1a1a1a;
+                font-size: 1.5rem;
+                font-style: italic;
+                font-weight: 700;
+                text-align: center;
+                padding: 8px 18px;
+                border: 3px solid #1a1a1a;
+                border-radius: 1.2rem;
+                white-space: nowrap;
+                line-height: 1.4;
+              "
+              >только не нажимайте<br />быстро и много!</span
+            >
           </div>
         </div>
       </main>
@@ -105,10 +125,58 @@
     </div>
     <script>
       const img = document.getElementById('me');
+      const banner = document.getElementById('banner');
+      const regular = ['./audio/hello.ogg', './audio/how-are-u.ogg'];
+      const SPAM_INTERVAL = 500;
+      const SPAM_THRESHOLD = 7;
+      let lastClickTime = 0;
+      let spamCount = 0;
+      let locked = false;
 
       img.addEventListener('click', () => {
+        if (locked) return;
+
         img.style.transform = 'scale(0.95)';
         setTimeout(() => (img.style.transform = 'scale(1)'), 100);
+
+        const now = Date.now();
+        spamCount = now - lastClickTime < SPAM_INTERVAL ? spamCount + 1 : 1;
+        lastClickTime = now;
+
+        if (spamCount >= SPAM_THRESHOLD) {
+          locked = true;
+          const stopAudio = new Audio('./audio/stop-beggin.ogg');
+          stopAudio.play();
+          stopAudio.addEventListener(
+            'ended',
+            () => {
+              const pleaseAudio = new Audio('./audio/pleeease.ogg');
+              const fadeOut = () => {
+                img.style.transition = `opacity ${pleaseAudio.duration}s linear, transform 0.1s`;
+                img.style.opacity = '0';
+                img.addEventListener(
+                  'transitionend',
+                  () => {
+                    banner.innerHTML = '🥲';
+                    banner.style.fontSize = '3rem';
+                    banner.style.fontStyle = 'normal';
+                  },
+                  { once: true }
+                );
+              };
+              if (pleaseAudio.readyState >= 1) {
+                fadeOut();
+              } else {
+                pleaseAudio.addEventListener('loadedmetadata', fadeOut, { once: true });
+              }
+              pleaseAudio.play();
+            },
+            { once: true }
+          );
+          return;
+        }
+
+        new Audio(regular[Math.floor(Math.random() * regular.length)]).play();
       });
     </script>
   </body>
