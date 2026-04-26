@@ -82,27 +82,27 @@
               alt="Umyar Yusupov"
               style="cursor: pointer; transition: opacity 1.5s ease, transform 0.1s"
             />
-            <span
+            <!-- <span
               id="banner"
               style="
                 position: absolute;
                 bottom: 1rem;
-                left: 50%;
+                box-shadow: 0 0 15px 5px #000000;
+                left: 56%;
                 transform: translateX(-50%);
-                background: #fff;
+                background: #ffffffc9;
                 color: #1a1a1a;
-                font-size: 1.5rem;
+                font-size: 1rem;
                 font-style: italic;
-                font-weight: 700;
+                font-weight: 600;
                 text-align: center;
-                padding: 8px 18px;
-                border: 3px solid #1a1a1a;
-                border-radius: 1.2rem;
+                padding: 2px 10px;
+                border-radius: 1rem;
                 white-space: nowrap;
                 line-height: 1.4;
               "
-              >только не нажимайте<br />быстро и много!</span
-            >
+              >нажимать можно<br />НО МАЛО И МЕДЛЕННО!</span
+            > -->
           </div>
         </div>
       </main>
@@ -125,7 +125,7 @@
     </div>
     <script>
       const img = document.getElementById('me');
-      const banner = document.getElementById('banner');
+      // const banner = document.getElementById('banner');
       const regular = ['./audio/hello.ogg', './audio/how-are-u.ogg'];
       const SPAM_INTERVAL = 500;
       const SPAM_THRESHOLD = 7;
@@ -154,15 +154,15 @@
               const fadeOut = () => {
                 img.style.transition = `opacity ${pleaseAudio.duration}s linear, transform 0.1s`;
                 img.style.opacity = '0';
-                img.addEventListener(
-                  'transitionend',
-                  () => {
-                    banner.innerHTML = '🥲';
-                    banner.style.fontSize = '3rem';
-                    banner.style.fontStyle = 'normal';
-                  },
-                  { once: true }
-                );
+                // img.addEventListener(
+                //   'transitionend',
+                //   () => {
+                //     banner.innerHTML = '🥲';
+                //     banner.style.fontSize = '3rem';
+                //     banner.style.fontStyle = 'normal';
+                //   },
+                //   { once: true }
+                // );
               };
               if (pleaseAudio.readyState >= 1) {
                 fadeOut();
