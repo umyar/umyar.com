@@ -169,6 +169,10 @@
               } else {
                 pleaseAudio.addEventListener('loadedmetadata', fadeOut, { once: true });
               }
+              gtag('event', 'image_hidden', {
+                event_category: 'engagement',
+                event_label: 'spam_clicks',
+              });
               pleaseAudio.play();
             },
             { once: true }
