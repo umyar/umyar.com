@@ -56,6 +56,7 @@ ul {
 
 body {
   width: 100%;
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   /*color: #feca39;*/
@@ -67,6 +68,7 @@ body {
 .main-layout {
   width: 100%;
   max-width: 4096px;
+  min-width: 0;
   margin: 0 10rem;
   display: flex;
   flex-direction: column;
@@ -241,7 +243,7 @@ footer {
 
 main h2 {
   font-size: 2.5rem;
-  line-height: 1em;
+  line-height: 1.2;
   background-image: linear-gradient(to left, #dc2424, #4a569d);
   -webkit-background-clip: text;
   background-clip: text;
@@ -337,10 +339,15 @@ p {
 
 footer {
   display: flex;
-  width: 100%;
-  margin: 5rem 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 5rem 0 0;
+  padding: 3rem 2rem;
   text-align: center;
   justify-content: center;
+  border-top: 1px solid #e3e3e3;
 }
 
 .contacts {
@@ -361,6 +368,8 @@ footer {
   display: flex;
   width: 100%;
   justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
 }
 
 .contacts-ul li {
@@ -379,50 +388,17 @@ footer {
 .contacts-ul li a {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   font-size: 1.1rem;
   letter-spacing: 0;
 }
 
-#tg {
-  animation: gain ease-in-out 0.8s infinite;
-}
-
-.tg-pulse {
-  animation: gain ease-in-out 0.8s infinite;
-}
-
-@keyframes gain {
-  from {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
 .inline-footer {
-  display: block;
-  margin-top: 2rem;
-}
-
-footer {
   display: none;
 }
 
 @media screen and (max-width: 1280px) {
-  .inline-footer {
-    display: none;
-  }
-
-  footer {
-    display: flex;
-  }
-
   .main-photo {
     max-width: 45%;
   }
