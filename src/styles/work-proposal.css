@@ -376,12 +376,53 @@ footer {
   margin: 0 1rem;
 }
 
-.contacts-ul li img {
-  width: 4rem;
-  height: 4rem;
-  cursor: pointer;
+.contacts-ul li .contact-ico {
+  display: block;
+  width: 2.8rem;
+  height: 2.8rem;
   margin: 0 auto;
-  filter: brightness(0);
+  cursor: pointer;
+  background: linear-gradient(to left, #dc2424, #4a569d);
+  transition: filter 0.25s ease;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.ico-poupy-mono {
+  -webkit-mask-image: url(../img/contacts/poupy-mono.svg);
+  mask-image: url(../img/contacts/poupy-mono.svg);
+}
+.ico-telegram {
+  -webkit-mask-image: url(../img/contacts/telegram.svg);
+  mask-image: url(../img/contacts/telegram.svg);
+}
+.ico-linkedin {
+  -webkit-mask-image: url(../img/contacts/linkedin.svg);
+  mask-image: url(../img/contacts/linkedin.svg);
+}
+.ico-threads {
+  -webkit-mask-image: url(../img/contacts/threads.svg);
+  mask-image: url(../img/contacts/threads.svg);
+}
+.ico-x {
+  -webkit-mask-image: url(../img/contacts/x.svg);
+  mask-image: url(../img/contacts/x.svg);
+}
+.ico-instagram {
+  -webkit-mask-image: url(../img/contacts/instagram.svg);
+  mask-image: url(../img/contacts/instagram.svg);
+}
+.ico-reddit {
+  -webkit-mask-image: url(../img/contacts/reddit.svg);
+  mask-image: url(../img/contacts/reddit.svg);
+}
+.ico-youtube {
+  -webkit-mask-image: url(../img/contacts/youtube.svg);
+  mask-image: url(../img/contacts/youtube.svg);
 }
 
 .contacts-ul li a {
@@ -389,6 +430,19 @@ footer {
   flex-direction: column;
   font-size: 1.1rem;
   letter-spacing: 0;
+}
+
+/* gradient hover: paint both the masked icon and the label text */
+.contacts-ul li a:hover {
+  background-image: linear-gradient(to left, #dc2424, #4a569d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contacts-ul li a:hover .contact-ico {
+  filter: drop-shadow(2px 0 5px rgba(220, 36, 36, 0.55))
+    drop-shadow(-2px 0 5px rgba(74, 86, 157, 0.55));
 }
 
 #tg {
@@ -536,9 +590,9 @@ footer {
   .contacts-ul li a {
     font-size: 0.9rem;
   }
-  .contacts-ul li img {
-    width: 3.2rem;
-    height: 3.2rem;
+  .contacts-ul li .contact-ico {
+    width: 2.24rem;
+    height: 2.24rem;
   }
 }
 
