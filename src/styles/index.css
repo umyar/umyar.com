@@ -75,7 +75,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  margin: 4rem 0 2rem 0;
+  margin: 4rem 0 6rem 0;
 }
 
 .logo {
