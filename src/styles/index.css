@@ -421,6 +421,10 @@ footer {
   -webkit-mask-image: url(../img/contacts/reddit.svg);
   mask-image: url(../img/contacts/reddit.svg);
 }
+.ico-github {
+  -webkit-mask-image: url(../img/contacts/github.svg);
+  mask-image: url(../img/contacts/github.svg);
+}
 .ico-youtube {
   -webkit-mask-image: url(../img/contacts/youtube.svg);
   mask-image: url(../img/contacts/youtube.svg);
